@@ -19,7 +19,7 @@ export default function StationList() {
         const { latitude, longitude } = position.coords;
         try {
           const { data } = await api.get('/stations/nearby', {
-            params: { lat: latitude, lng: longitude, radius: 500000 },
+            params: { lat: latitude, lng: longitude, radius: 5000000 },
           });
           setStations(data);
         } catch (err) {
